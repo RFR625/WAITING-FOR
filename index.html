@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Пустая страница</title></head>
+<body>
+  <p>Ничего интересного здесь нет.</p>
+  <div id="menu" style="display:none">
+    <h3>Секретное меню</h3>
+    <p>Здесь будет список посещений</p>
+  </div>
+  <script>
+    let buffer = "";
+    document.addEventListener("keydown", function(e) {
+      buffer += e.key;                  // собираем нажатые клавиши
+      if (buffer.endsWith("мод")) {     // секретное слово
+        document.getElementById("menu").style.display = "block";
+        buffer = "";
+      }
+    });
+  </script>
+</body>
+</html>
